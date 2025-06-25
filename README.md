@@ -5,7 +5,7 @@ This project implements a Bluetooth-controlled robot with analog sensor feedback
 
 https://github.com/user-attachments/assets/3b251a83-b700-46ea-8428-853f37613961
 
-HC-05 Bluetooth remote control (UART commands)
+HC-06 Bluetooth remote control (UART commands)
 
 PWM motor control (TIM3 with 4 channels)
 
@@ -21,7 +21,7 @@ Required Components
 
 STM32F407 Discovery Board 
 
-HC-05/HC-06 Bluetooth Module (UART2: PA2-TX, PA3-RX)
+HC-06 Bluetooth Module (UART2: PA2-TX, PA3-RX)
 
 L298N Motor Driver (or similar)
 
