@@ -1,11 +1,9 @@
 # STM32F407-Based-Robot-Control-via-Bluetooth
 
-# STM32F407-Based-Robot-Control-via-Bluetooth
-
 📌 Overview
 This project implements a Bluetooth-controlled robot with analog sensor feedback using the STM32F407 microcontroller with bare-metal programming (no HAL/LL libraries). The firmware is developed in Keil MDK.
 
-<!-- Uploading "STM robot.mp4"... -->
+https://github.com/user-attachments/assets/3b251a83-b700-46ea-8428-853f37613961
 
 HC-05 Bluetooth remote control (UART commands)
 
