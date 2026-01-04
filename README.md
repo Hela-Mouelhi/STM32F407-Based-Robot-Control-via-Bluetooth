@@ -5,48 +5,62 @@ This project implements a Bluetooth-controlled robot with analog sensor feedback
 
 https://github.com/user-attachments/assets/3b251a83-b700-46ea-8428-853f37613961
 
-HC-06 Bluetooth remote control (UART commands)
 
-PWM motor control (TIM3 with 4 channels)
+## 🔑 Key Technologies
 
-Multi-channel ADC sensor reading (PB4-PB6)
+- **Microcontroller:** STM32F407 (ARM Cortex-M4 @ 168 MHz)
+- **Communication:** Bluetooth SPP (Serial Port Profile)
+- **Motor Control:** 4-channel PWM using L298N motor driver
+- **Sensors:** 3-channel ADC for analog sensor acquisition
+- **Control Architecture:** Interrupt-based event handling
+- **Communication Protocol:** Simple text-based command system
 
-External interrupt (EXTI) for manual start
+---
 
-Timer-based ADC sampling (TIM6)
+## ✨ Features
 
-🛠 Hardware Setup
+### 🎮 Control Features
+- **Wireless Bluetooth Control:** Real-time motor control via smartphone or PC
+- **Variable Speed Control:** Incremental speed adjustment (±100 PWM units)
+- **Direction Control:** Forward, backward, left, right, and stop commands
+- **Smooth Acceleration:** Gradual speed changes to protect motors and improve stability
 
-Required Components
+---
 
-STM32F407 Discovery Board 
+### 🔧 Technical Features
+- **4-Channel PWM:** Independent control of two DC motors
+- **3-Channel ADC:** Simultaneous monitoring of analog sensors
+- **Interrupt-Driven Design:** Efficient CPU usage and fast response
+- **Priority-Based Interrupts:** Configurable interrupt hierarchy
+- **Real-Time Feedback:** Sensor data transmitted via Bluetooth
+- **Physical Start Button:** External interrupt-based start/reset control
 
-HC-06 Bluetooth Module (UART2: PA2-TX, PA3-RX)
+---
 
-L298N Motor Driver (or similar)
+### 📊 Monitoring Features
+- **Real-Time ADC Values:** Live monitoring of three analog sensor inputs
+- **Command Echo:** Bluetooth command acknowledgment for reliability
+- **Error Handling:** Buffer overflow protection for received commands
+- **Safe Motor Control:** Boundary checks to prevent invalid PWM values
 
-DC Motors ×2
+---
 
-Analog Sensors (e.g., potentiometers, IR sensors on PB4-PB6)
+## 🛠 Hardware Requirements
 
-Push Button (PA0 for EXTI0 interrupt)
+### Essential Components
 
-⚙️ Setup Instructions
+| Component                     | Quantity | Description                          |
+|--------------------------------|----------|--------------------------------------|
+| STM32F407 Discovery Board      | 1        | Main microcontroller                 |
+| HC-05 / HC-06 Bluetooth Module | 1        | Wireless communication               |
+| L298N Motor Driver             | 1        | Dual H-bridge motor controller       |
+| DC Motors (12V)                | 2        | Robot drive motors                   |
+| 7–12V Power Supply             | 1        | Motor power source                   |
+| 3.3V / 5V Voltage Regulator    | 1        | Logic power supply                   |
+| Push Button                    | 1        | Start / reset button                 |
+| Analog Sensors                 | 3        | Optional (IR, potentiometer, etc.)   |
 
-Flash the code using Keil MDK (ARMCC compiler).
-
-Wire the hardware as per the pinout table.
-
-Pair HC-05 (default PIN: 1234) and send commands via a serial terminal (e.g., Mobile app).Press PA0 button to enable motor control and ADC sampling.
-
-🔗 Resources
-
-STM32F407 Reference Manual
-
-HC-05 Datasheet
-
-Keil MDK Setup Guide
-
+---
 
 
 
