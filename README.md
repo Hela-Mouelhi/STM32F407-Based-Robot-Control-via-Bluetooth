@@ -58,11 +58,24 @@ https://github.com/user-attachments/assets/3b251a83-b700-46ea-8428-853f37613961
 | 7–12V Power Supply             | 1        | Motor power source                   |
 | 3.3V / 5V Voltage Regulator    | 1        | Logic power supply                   |
 | Push Button                    | 1        | Start / reset button                 |
-| Analog Sensors                 | 3        | Optional (IR, potentiometer, etc.)   |
+| Analog Sensors                 | 3        | potentiometer  |
 
 ---
 
+# 🏗️ Installation & Setup
 
+## Prerequisites
+
+### Software Requirements
+- **Keil uVision**  
+- **STM32CubeMX** for pin configuration  
+- **ST-Link Utility** for programming  
+- **Serial Terminal**: Putty
+- **ARM GCC Toolchain** (if using a custom build system)  
+
+### Bluetooth Apps for Smartphone Control
+- **Android**: Serial Bluetooth Terminal, Blueterm  
+- **Windows**: Tera Term, Putty with Bluetooth SPP
 
 
 
